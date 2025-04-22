@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Courier Prime', monospace;
+    background-color: #000;
+    color: #cfcfcf;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hero {
+    background-color: #000;
+    border-bottom: 1px solid #1e1e1e;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    color: #00ffcc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .subtitle,
+  .tagline {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 8px;
+  }
+  
+  .hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #00ffcc;
+    color: #000;
+  }
+  
+  .section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .section h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #00ffcc;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+  
+  .card {
+    background-color: #111;
+    border: 1px solid #222;
+    padding: 20px;
+    font-size: 0.95rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+    color: #00ffcc;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #999;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffcc;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 200px;
+  }
+  
+  .testimonial-slide {
+    display: none;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .testimonial-slide.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .testimonial-slide p {
+    font-size: 1rem;
+    background-color: #101010;
+    color: #ccc;
+    padding: 20px;
+    border: 1px solid #222;
+  }
+  
+  .testimonial-slide footer {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  .contact {
+    background-color: #0a0a0a;
+    padding: 40px 20px;
+    border: 1px solid #1a1a1a;
+  }
+  
+  .contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact input,
+  .contact textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #000;
+    color: #ccc;
+    border: 1px solid #333;
+    font-family: monospace;
+  }
+  
+  .contact button {
+    padding: 10px;
+    border: none;
+    background-color: #00ffcc;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    border-top: 1px solid #1e1e1e;
+    color: #777;
+  }
+  
+  .hero-button.linkedin {
+    border-color: #0e76a8;
+    color: #0e76a8;
+    margin-left: 10px;
+  }
+  
+  .hero-button.linkedin:hover {
+    background-color: #0e76a8;
+    color: #000;
+  }
+  
