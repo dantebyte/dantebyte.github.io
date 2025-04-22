@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dante Byte | Cybersecurity & Threat Intelligence</title>
+  <meta name="description" content="Cybersecurity, OSINT, DDoS defense, and threat mitigation by Dante Byte.">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Dante Byte</h1>
+      <p class="subtitle">Cybersecurity, Threat Intelligence & Offensive Security</p>
+      <p class="tagline">Focused on OPSEC, OSINT, Malware Defense & Digital Resilience.</p>
+      <a href="#contact" class="hero-button">Contact</a>
+    </div>
+  </header>
+
+  <section class="section services fade-in" id="services">
+    <h2>Core Services</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Threat Mitigation</h3>
+        <p>Real-time response and proactive defense against evolving cyber threats and APTs.</p>
+      </div>
+
+      <div class="card">
+        <h3>OSINT & Recon</h3>
+        <p>Targeted open-source intelligence gathering and investigation methodology.</p>
+      </div>
+
+      <div class="card">
+        <h3>DDoS & Malware Defense</h3>
+        <p>Infrastructure fortification against malware infections and network-based attacks.</p>
+      </div>
+
+      <div class="card">
+        <h3>Web Hardening</h3>
+        <p>Securing web applications through source code audit, WAF deployment, and patching.</p>
+      </div>
+
+      <div class="card">
+        <h3>Social Engineering Prevention</h3>
+        <p>Training and phishing simulation to reduce human attack surface vectors.</p>
+        </div>
+        
+        <div class="card">
+        <h3>Digital Footprint Reduction</h3>
+        <p>Strategic minimization of exposed assets, metadata, and public traces across platforms and networks.</p>
+    </div>
+  </section>
+
+  <section class="section testimonials fade-in" id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="slider-wrapper">
+      <div class="testimonial-slide active">
+        <p>"Dante was instrumental in identifying and mitigating serious security gaps within our logistics infrastructure. His professionalism, precision, and commitment to proactive defense saved us from what could have been catastrophic breaches."</p>
+        <footer>- Michelle Bugiani, Ace World Class Logistics</footer>
+      </div>
+      <div class="testimonial-slide">
+        <p>"We had infrastructure exposures for years without knowing. Dante mapped everything and helped us lock it down hard."</p>
+        <footer>- Ops Lead, Cobalt Hosting</footer>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Professional and precise. Dante's OSINT helped us identify multiple impersonation attempts and remove them efficiently."</p>
+        <footer>- CTO, NeuSec Labs</footer>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact fade-in" id="contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xkgrwdgz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your inquiry..." rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Dante Byte</p>
+  </footer>
+
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial-slide');
+    let index = 0;
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 6000);
+
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+</body>
+</html>
